@@ -1,16 +1,20 @@
 #include <iostream>
 using namespace std;
-
-int main() {
-    int size = 5 ;
-    int marks[size];
-    for (int i= 0 ; i<size;i++)
-    {
-        cin>>marks[i];
-    }
+int linearSearch(int arr[],int size ,int target)
+{
     for (int i=0;i<size;i++)
     {
-        cout<<marks[i]<<endl;
+    if(arr[i]==target);
+    {
+        return i ;
     }
-    return 0;
+}
+}
+
+int main() {
+int arr[]= {1,2,3,4,5,66};
+int size = 6;
+int target = 66;
+cout<<int linearSearch(int *arr, int size, int target)<<endl;
+return 0;
 }
