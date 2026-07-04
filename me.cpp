@@ -1,20 +1,30 @@
-#include <iostream>
-using namespace std;
-int linearSearch(int arr[],int size ,int target)
-{
-    for (int i=0;i<size;i++)
-    {
-    if(arr[i]==target);
-    {
-        return i ;
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> ans ;
+        int n = nums.size();
+        int i = 0 , j = n-1 ;
+        while (i<j)
+        {
+        int pairSum = nums[i]+nums[j];
+        if(pairSum>target ){
+            j--;
+        }else if(pairSum<target){
+         i++;
+        }else{
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
+        }
+        }
+return ans ; 
     }
-}
-}
-
-int main() {
-int arr[]= {1,2,3,4,5,66};
-int size = 6;
-int target = 66;
-cout<<int linearSearch(int *arr, int size, int target)<<endl;
-return 0;
-}
+    int main ()
+    {
+        vector<int> num = {2,7,11,15};
+        int target = 9;
+        vector<int> ans = pairSum(nums,target);
+        cout<<ans[0]<" , "<<ans[1]<<endl;
+        return 0;
+    }
+};
